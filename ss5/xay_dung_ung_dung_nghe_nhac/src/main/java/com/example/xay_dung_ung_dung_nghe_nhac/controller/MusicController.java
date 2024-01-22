@@ -40,7 +40,7 @@ public class MusicController {
         return "redirect:/";
     }
 
-    @PostMapping("/delete")
+    @GetMapping("/delete")
     public String delete(@ModelAttribute("music") Music music, RedirectAttributes redirectAttributes) {
         musicService.removeMusic(music);
         return "redirect:/";
